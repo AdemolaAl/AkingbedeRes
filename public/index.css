@@ -7,8 +7,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.button1, .button2 {
+  font-family: unset;
+  height: 45px;
+  min-width: 110px;
+  border-radius: 40px;
+  background-color: white;
+  border: 0;
+  padding: 0 30px;
+}
+
+.button2 {
+  background: var(--Skillversityafrica, #3b51f2);
+  color: white;
+}
+
 .cvr {
-  max-width: 1300px;
+  max-width: 1400px;
   width: 100%;
   margin: auto;
 }
@@ -197,4 +217,444 @@ header .nav a:hover {
 .videop .right p {
   font-size: 18px;
   line-height: 35px;
+}
+
+.elev {
+  width: 100%;
+  background: url("/pictures/stew-rice-coconut-plates-copy-space.jpg");
+  background-size: cover;
+  margin: 0 0 100px 0;
+  color: white;
+}
+.elev .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5882352941);
+  padding: 100px 0;
+}
+.elev .cvr {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.elev .txts {
+  width: 40%;
+  margin: 20px;
+}
+.elev .txt {
+  font-size: 27px;
+  font-weight: 500;
+  margin: 0;
+}
+.elev .p2 {
+  color: #d1d1d1;
+}
+
+.why {
+  padding: 0px 50px;
+}
+.why .cvr {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  margin: auto;
+}
+.why .txts h2 {
+  font-size: 28px;
+}
+.why img {
+  border-radius: 10px;
+  flex: 1;
+  width: 50%;
+}
+
+.products {
+  margin: 50px 120px;
+}
+.products h2 {
+  text-align: center;
+}
+.products .cvr {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.products .cvr .itm {
+  width: calc(25% - 30px);
+}
+.products .cvr .itm img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content {
+  width: 50%;
+  margin: 50px auto;
+}
+
+footer {
+  background-color: #252641;
+  color: white;
+}
+footer .top {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 200px;
+}
+footer .top .left {
+  font-weight: bold;
+  width: 330px;
+}
+footer .top .left .p1 {
+  font-size: 25px;
+}
+footer .top .left .button1, footer .top .left .button2 {
+  font-size: 11px;
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 0 20px;
+  height: 30px;
+  min-width: unset;
+}
+footer .top .left .button2 {
+  background-color: rgba(76, 133, 255, 0.288);
+}
+footer .top .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .top .right .cvr {
+  width: 150px;
+}
+footer .top .right .cvr .p3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+footer .top .right .cvr .p4 {
+  font-size: 10px;
+  color: #B7BAC7;
+}
+footer .bottom {
+  color: #B7BAC7;
+  display: flex;
+  align-items: start;
+  padding: 70px 200px;
+  border-top: 1px solid #2e2f52;
+  border-bottom: 1px solid #2e2f52;
+}
+footer .bottom .logo {
+  width: 250px;
+}
+footer .bottom .logo img {
+  width: 50px;
+}
+footer .bottom .logo .p1 {
+  font-size: 11px;
+}
+footer .bottom .cvr {
+  display: flex;
+  margin-left: 100px;
+}
+footer .bottom .cvr .cat {
+  font-size: 11px;
+  margin-left: 30px;
+}
+footer .bottom .cvr .cat .top2 {
+  color: white;
+  margin-bottom: 10px;
+}
+footer .bottom .cvr .cat .p5 {
+  margin-bottom: 7px;
+}
+footer .bottom .socials {
+  display: flex;
+  margin-top: 20px;
+}
+footer .bottom .socials .left2 {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1019607843);
+  margin-right: 10px;
+}
+footer .p6 {
+  font-size: 11px;
+  color: #B7BAC7;
+  padding: 20px 200px;
+}
+
+@media only screen and (max-width: 820px) {
+  header {
+    display: none;
+  }
+  .main {
+    background: url("/pictures/high-angle-shot-delicious-traditional-ethiopian-food-with-vegetables-wooden-surface.jpg");
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+  .main .background-cover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5882352941);
+  }
+  .main .cvr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+  .main .txt-cvr {
+    width: 100%;
+    height: calc(100dvh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .main .txt-cvr h1 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    font-size: 50px;
+    display: inline;
+  }
+  .main .txt-cvr h1 p {
+    color: rgb(4, 201, 4);
+    display: inline;
+  }
+  .main .txt-cvr p {
+    width: 90%;
+    margin: auto;
+    color: #d1d1d1;
+    margin-bottom: 10px;
+  }
+  .videop {
+    width: unset;
+    margin: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: unset;
+    justify-content: space-between;
+    gap: unset;
+  }
+  .videop .left {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 20px 30px;
+    border: 1px solid rgb(4, 201, 4);
+  }
+  .videop .left video {
+    height: 400px;
+  }
+  .videop .left .first-box,
+  .videop .left .second-box {
+    width: 30px;
+    background-color: rgb(4, 201, 4);
+    height: 30%;
+    position: absolute;
+  }
+  .videop .left .first-box {
+    top: 0px;
+    left: 0px;
+  }
+  .videop .left .second-box {
+    bottom: 0px;
+    right: 0px;
+  }
+  .videop .right {
+    margin-top: 20px;
+  }
+  .videop .right h2 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    margin: 0;
+    font-style: normal;
+    font-size: 45px;
+    color: black;
+  }
+  .videop .right p {
+    font-size: 15px;
+    line-height: 35px;
+  }
+  .elev {
+    width: 100%;
+    background: url("/pictures/stew-rice-coconut-plates-copy-space.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 100px 0;
+    color: white;
+  }
+  .elev .filter {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5882352941);
+    padding: 100px 0;
+  }
+  .elev .cvr {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .elev .txts {
+    width: 100%;
+    margin: 20px;
+  }
+  .elev .txt {
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .elev .p2 {
+    color: #d1d1d1;
+  }
+  .why {
+    padding: 0px 20px;
+  }
+  .why .cvr {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 30px;
+    justify-content: space-between;
+    margin: auto;
+  }
+  .why .txts h2 {
+    font-size: 28px;
+  }
+  .why img {
+    border-radius: 10px;
+    flex: 1;
+    width: 50%;
+    display: none;
+  }
+  .content {
+    width: unset;
+    margin: 50px 20px;
+  }
+  .products {
+    margin: 50px 20px;
+  }
+  .products h2 {
+    text-align: center;
+  }
+  .products .cvr {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .products .cvr .itm {
+    width: 100%;
+  }
+  .products .cvr .itm img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  footer {
+    background-color: #252641;
+    color: white;
+  }
+  footer .top {
+    display: none;
+    padding: 70px 20px;
+  }
+  footer .top .left {
+    font-weight: unset;
+    width: 330px;
+  }
+  footer .top .left .p1 {
+    font-size: 25px;
+  }
+  footer .top .left .button1, footer .top .left .button2 {
+    font-size: 11px;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 0 20px;
+    height: 30px;
+    min-width: unset;
+  }
+  footer .top .left .button2 {
+    background-color: rgba(76, 133, 255, 0.288);
+  }
+  footer .top .right {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .top .right .cvr {
+    width: 150px;
+  }
+  footer .top .right .cvr .p3 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  footer .top .right .cvr .p4 {
+    font-size: 10px;
+    color: #B7BAC7;
+  }
+  footer .bottom {
+    color: #B7BAC7;
+    display: block;
+    align-items: start;
+    padding: 70px 20px;
+    border-top: 1px solid #2e2f52;
+    border-bottom: 1px solid #2e2f52;
+  }
+  footer .bottom .logo {
+    width: 250px;
+  }
+  footer .bottom .logo img {
+    width: 50px;
+  }
+  footer .bottom .logo .p1 {
+    font-size: 11px;
+  }
+  footer .bottom .cvr {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+  footer .bottom .cvr .cat {
+    font-size: 11px;
+    margin-left: 0px;
+  }
+  footer .bottom .cvr .cat .top2 {
+    color: white;
+    margin-bottom: 10px;
+  }
+  footer .bottom .cvr .cat .p5 {
+    margin-bottom: 7px;
+  }
+  footer .bottom .socials {
+    display: flex;
+    margin-top: 20px;
+  }
+  footer .bottom .socials .left2 {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1019607843);
+    margin-right: 10px;
+  }
+  footer .p6 {
+    font-size: 11px;
+    color: #B7BAC7;
+    padding: 20px 20px;
+  }
 }/*# sourceMappingURL=index.css.map */

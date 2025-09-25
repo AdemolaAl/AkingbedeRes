@@ -13,6 +13,10 @@ app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/index.html');
 })
 
+app.get('/contact', (req,res)=>{
+    res.sendFile(__dirname + '/views/contact.html');
+})
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
