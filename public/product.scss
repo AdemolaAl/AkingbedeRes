@@ -1,0 +1,184 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "poppins";
+    color: #464646;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    min-height: 100dvh;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+.button1 {
+    font-family: unset;
+    height: 45px;
+    min-width: 110px;
+    border-radius: 40px;
+    background-color: white;
+    border: 0;
+    padding: 0 30px;
+}
+
+.button2 {
+    @extend .button1;
+    background: var(--Skillversityafrica, #3b51f2);
+    color: white;
+}
+
+.cvr {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+}
+
+header {
+    color: rgb(0, 0, 0);
+    padding:5px 20px;
+    box-shadow: rgba(197, 197, 197, 0.2) 0px 2px 8px 0px;
+
+    .cvr {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            height: 60px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            display: inline;
+        }
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        a {
+            text-decoration: none;
+            color: #242424;
+            font-weight: 500;
+            transition: 0.3s;
+
+            &:hover {
+                color: #9b9b9b;
+            }
+        }
+    }
+}
+
+
+.product-main{
+    max-width: 1400px;
+    padding: 50px 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    img{
+        width:calc(100% - 50px) ;
+    }
+    .right{
+        h2{
+            
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #252641;
+    color: white;
+
+    .top{
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        padding: 70px 200px;
+
+        .left{
+            font-weight: bold;
+            width:330px;
+            .p1{font-size: 25px;}
+            .button1{
+                font-size: 11px;
+                margin-top: 20px;
+                margin-right: 10px;
+                padding: 0 20px;
+                height: 30px;
+                min-width: unset;
+                
+            }
+            .button2{
+                background-color: rgba(76, 133, 255, 0.288);
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .cvr{
+                width: 150px;
+                .p3{font-size: 30px; font-weight: bold;}
+                .p4{font-size: 10px; color: #B7BAC7;}
+            }
+        }
+    }
+
+    .bottom{
+        color: #B7BAC7;
+        display: flex;
+        align-items: start;
+        padding: 70px 200px;
+        border-top:1px solid #2e2f52 ;
+        border-bottom:1px solid #2e2f52 ;
+        .logo{
+            width: 250px;
+            img{width: 50px;}
+            .p1{font-size: 11px;}
+        }
+
+
+        
+        .cvr{
+            display: flex;
+            margin-left: 100px;
+            .cat{
+                font-size: 11px;
+                margin-left:30px ;
+                .top2{color: white; margin-bottom: 10px; }
+                .p5{margin-bottom: 7px;}
+            }
+
+        }
+        .socials{
+            display: flex;
+            margin-top: 20px;
+            .left2{height: 30px; width: 30px;   display: flex; align-items: center; justify-content: center; background: #FFFFFF1A; margin-right: 10px;}
+        }
+    }
+
+    .p6{
+        font-size: 11px;
+        color: #B7BAC7;
+        padding: 20px 200px;
+    }
+}
