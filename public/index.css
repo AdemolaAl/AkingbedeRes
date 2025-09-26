@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "poppins";
-  color: #464646;
+  color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -127,25 +127,25 @@ header .nav a:hover {
   border-radius: 10px;
 }
 
-.main {
+.main, .mainres {
   background: url("/pictures/high-angle-shot-delicious-traditional-ethiopian-food-with-vegetables-wooden-surface.jpg");
   height: 100dvh;
   background-size: cover;
   background-position: center;
   width: 100%;
 }
-.main .background-cover {
+.main .background-cover, .mainres .background-cover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5882352941);
 }
-.main .cvr {
+.main .cvr, .mainres .cvr {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex: 1;
 }
-.main .txt-cvr {
+.main .txt-cvr, .mainres .txt-cvr {
   width: 100%;
   height: calc(100dvh - 120px);
   display: flex;
@@ -154,7 +154,7 @@ header .nav a:hover {
   color: white;
   text-align: center;
 }
-.main .txt-cvr h1 {
+.main .txt-cvr h1, .mainres .txt-cvr h1 {
   font-family: "Rozha One", serif;
   font-weight: 400;
   font-style: normal;
@@ -162,15 +162,169 @@ header .nav a:hover {
   font-size: 50px;
   display: inline;
 }
-.main .txt-cvr h1 p {
+.main .txt-cvr h1 p, .mainres .txt-cvr h1 p {
   color: rgb(4, 201, 4);
   display: inline;
 }
-.main .txt-cvr p {
+.main .txt-cvr p, .mainres .txt-cvr p {
   width: 50%;
   margin: auto;
   color: #d1d1d1;
   margin-bottom: 10px;
+}
+
+.mainres {
+  background: url("/pictures/rakhmat-suwandi-TUOhFvuQSuY-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.mainres header {
+  padding: 5px 20px;
+}
+.mainres .background-cover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5137254902);
+}
+.mainres .txt-cvr {
+  width: 100%;
+  height: calc(100dvh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.mainres .txt-cvr h1 {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  font-size: 50px;
+  display: inline-block;
+  width: 80%;
+  margin: auto;
+}
+.mainres .txt-cvr h1 p {
+  color: rgb(4, 201, 4);
+  display: inline;
+}
+.mainres .txt-cvr .p {
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+  color: #d1d1d1;
+  margin-bottom: 10px;
+}
+
+.led {
+  margin: 50px 30px;
+  width: 50%;
+}
+.led h2 {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.btn2 {
+  padding: 7px 20px;
+  border: none;
+  font-family: unset;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(21, 19, 46);
+}
+
+.sample {
+  margin: 100px 30px;
+}
+.sample h2 {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin: 5px 0;
+}
+.sample .preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.sample .preview section {
+  width: calc(25% - 30px);
+}
+.sample .preview section .itm img {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.grlmn {
+  margin: 100px;
+}
+.grlmn h2 {
+  text-align: center;
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin: 5px 0;
+}
+.grlmn .gallery-cvr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  /* Place images in a circle */
+}
+.grlmn .gallery-cvr .gallery {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 15s linear infinite;
+  transform: rotateX(-15deg);
+}
+.grlmn .gallery-cvr .gallery img {
+  position: absolute;
+  width: 280px;
+  height: 180px;
+  left: 10px;
+  top: 60px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.grlmn .gallery-cvr .gallery img:nth-child(1) {
+  transform: rotateY(0deg) translateZ(400px);
+}
+.grlmn .gallery-cvr .gallery img:nth-child(2) {
+  transform: rotateY(60deg) translateZ(400px);
+}
+.grlmn .gallery-cvr .gallery img:nth-child(3) {
+  transform: rotateY(120deg) translateZ(400px);
+}
+.grlmn .gallery-cvr .gallery img:nth-child(4) {
+  transform: rotateY(180deg) translateZ(400px);
+}
+.grlmn .gallery-cvr .gallery img:nth-child(5) {
+  transform: rotateY(240deg) translateZ(400px);
+}
+.grlmn .gallery-cvr .gallery img:nth-child(6) {
+  transform: rotateY(300deg) translateZ(400px);
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 .videop {
@@ -393,25 +547,25 @@ footer .p6 {
   header {
     display: none;
   }
-  .main {
+  .main, .mainres {
     background: url("/pictures/high-angle-shot-delicious-traditional-ethiopian-food-with-vegetables-wooden-surface.jpg");
     height: 100dvh;
     background-size: cover;
     background-position: center;
     width: 100%;
   }
-  .main .background-cover {
+  .main .background-cover, .mainres .background-cover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5882352941);
   }
-  .main .cvr {
+  .main .cvr, .mainres .cvr {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex: 1;
   }
-  .main .txt-cvr {
+  .main .txt-cvr, .mainres .txt-cvr {
     width: 100%;
     height: calc(100dvh - 120px);
     display: flex;
@@ -420,7 +574,7 @@ footer .p6 {
     color: white;
     text-align: center;
   }
-  .main .txt-cvr h1 {
+  .main .txt-cvr h1, .mainres .txt-cvr h1 {
     font-family: "Rozha One", serif;
     font-weight: 400;
     font-style: normal;
@@ -428,11 +582,11 @@ footer .p6 {
     font-size: 50px;
     display: inline;
   }
-  .main .txt-cvr h1 p {
+  .main .txt-cvr h1 p, .mainres .txt-cvr h1 p {
     color: rgb(4, 201, 4);
     display: inline;
   }
-  .main .txt-cvr p {
+  .main .txt-cvr p, .mainres .txt-cvr p {
     width: 90%;
     margin: auto;
     color: #d1d1d1;

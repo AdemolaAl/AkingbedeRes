@@ -19,6 +19,9 @@ app.get('/contact', (req,res)=>{
 app.get('/product', (req,res)=>{
     res.sendFile(__dirname + '/views/productpage.html');
 })
+app.get('/res', (req,res)=>{
+    res.sendFile(__dirname + '/views/resturnt.html');
+})
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
