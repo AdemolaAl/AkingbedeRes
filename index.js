@@ -25,6 +25,12 @@ app.get('/res', (req,res)=>{
 app.get('/about', (req,res)=>{
     res.sendFile(__dirname + '/views/about.html');
 })
+app.get('/gallery', (req,res)=>{
+    res.sendFile(__dirname + '/views/gallery.html');
+})
+app.get('/catering', (req,res)=>{
+    res.sendFile(__dirname + '/views/catering.html');
+})
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

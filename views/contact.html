@@ -58,20 +58,21 @@
     <div id="slidein-mobile">
         <div class="menu">
             <div class="menu-header">
-              <a href="/"><img src="/logo/Icon-colour.png" alt="Coursera Logo" class="logo" /></a>
+              <a href="/"><img src="/pictures/logo-akhigbe.png" alt="Coursera Logo" class="logo" /></a>
               <button class="close-btn" onclick="slideOut()">&times;</button>
             </div>
             <ul class="menu-list">
-                <a href="/courses"><li>Programs & Courses</li></a>
-              <a href="/form"><li>Admissions & Application</li></a>
-              <a href="/terms"><li>Terms and condition</li></a>
-              <a href="/contact"><li>Contact Us</li></a>
+              <a href="/"><li>Home</li></a>
+              <a href="/about"><li>About Us</li></a>
+              <a href="/res"><li>Restaurant</li></a>
+              <a href="/groceries"><li>Groceries</li></a>
+              <a href="/contact"><li>Contact</li></a>
               <hr />
               <hr />
             </ul>
-            <a href="#" class="coursera-plus">Join Skillversity <span>NOW</span></a>
+             
             
-            <a href="/form">
+            <a href="/contact">
                 <div class="menu-buttons">
                 <button class="join-btn">Apply now</button>
                 </div>
@@ -90,8 +91,8 @@
                 <a href="/">Home</a>
                 <a href="/about">About Us</a>
                 <a href="/explore-foods">Explore Foods</a>
-                <a href="/reviews">Reviews</a>
-                <a href="/faq">FAQ</a>
+                <a href="/gallery">Gallery</a>
+                <a href=" /contact">Contact</a>
             </div>
         </div>
 
@@ -163,7 +164,7 @@
 
                 <button class="button2">Send</button>
 
-            </form>
+            </contact>
         </div>
     </div>
 
@@ -193,7 +194,7 @@
     
     
     
-                const response = await fetch('/form', {
+                const response = await fetch('/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

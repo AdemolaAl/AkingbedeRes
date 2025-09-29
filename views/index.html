@@ -24,6 +24,50 @@
 
 <body>
 
+    <div class="topmobile">
+
+        <img src="/pictures/logo-akhigbe.png" alt="SkillversityAfrica Official Logo" srcset="">
+
+        <button class="bars" onclick="slide()"><i class="fa-solid fa-bars"></i></button>
+
+    </div>
+
+    <div id="slidein-mobile">
+        <div class="menu">
+            <div class="menu-header">
+                <a href="/"><img src="/pictures/logo-akhigbe.png" alt="Coursera Logo" class="logo" /></a>
+                <button class="close-btn" onclick="slideOut()">&times;</button>
+            </div>
+            <ul class="menu-list">
+                <a href="/">
+                    <li>Home</li>
+                </a>
+                <a href="/about">
+                    <li>About Us</li>
+                </a>
+                <a href="/res">
+                    <li>Restaurant</li>
+                </a>
+
+                <a href="/gallery">
+                    <li>Gallery</li>
+                </a>
+                <a href="/contact">
+                    <li>Contact</li>
+                </a>
+                <hr />
+                <hr />
+            </ul>
+            
+
+            <a href="/contact">
+                <div class="menu-buttons">
+                    <button class="join-btn">Apply now</button>
+                </div>
+            </a>
+        </div>
+    </div>
+
 
     <div class="main">
         <div class="background-cover">
@@ -37,8 +81,8 @@
                         <a href="/">Home</a>
                         <a href="/about">About Us</a>
                         <a href="/res">Restaurant</a>
-                        <a href="/reviews">Reviews</a>
-                        <a href="/faq">FAQ</a>
+                        <a href="/gallery">Gallery</a>
+                        <a href=" /contact">Contact</a>
                     </div>
                 </div>
 
@@ -49,9 +93,9 @@
                         <h1>
                             <p>Akhigbe</p> African Supermarket
                         </h1>
-                        <p>Your Source for Authentic African & Caribbean Groceries. We’re more than a cultural grocery
-                            store we’re your gateway to authentic African and Caribbean flavors in Canada</p>
-                        <button class="button-85">Learn More </button>
+                        <p>Your Source for Authentic African Groceries. We’re more than a cultural grocery
+                            store we’re your gateway to authentic African flavors in Canada</p>
+                        <a href="/about"><button class="button-85">Learn More </button></a>
                     </div>
                 </div>
             </div>
@@ -63,8 +107,8 @@
             <div class="left">
                 <div class="first-box"></div>
                 <div class="second-box"></div>
-                <video loop controls autoplay>
-                    <source src="pictures/akhigbe-food.mp4" type="video/mp4">
+                <video loop controls autoplay muted>
+                    <source src="pictures/akhigbe-food.mp4" type="video/mp4" >
                 </video>
             </div>
             <div class="right">
@@ -81,7 +125,7 @@
         <div class="filter">
             <div class="cvr">
                 <div class="txts">
-                    <p class="txt">Elevate weddings or parties with bold Nigerian and Caribbean dishes by expert chefs</p>
+                    <p class="txt">Elevate weddings or parties with bold Nigerian dishes by expert chefs</p>
                     <div class="p2">Led by Rita, our celebrated Nigerian chef with 25+ years of culinary mastery, Akhigbe Restaurant transports you to the heart of Nigeria with every bite. Indulge in house specials like aromatic jollof rice, tender pepper soup, or crispy plantain chips, all prepared with fresh, imported ingredients</div>
                 </div>
                 
@@ -93,33 +137,48 @@
         <div class="cvr">
             <div class="txts">
                 <h2>Why Shop With Us?</h2>
-                <ul class="why-list">
-                    <li>
-                        <i class="fas fa-leaf"></i>
-                        <strong>Authentic African & Caribbean Ingredients</strong>
-                        <p>Find fresh egusi, yam, and jerk spices imported weekly for authentic home-cooked meals.</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-utensils"></i>
-                        <strong>Flavors of Home, Made Simple</strong>
-                        <p>Explore our recipe guides to create Nigerian jollof or Caribbean curry with ease.</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-concierge-bell"></i>
-                        <strong>Celebrate Culture with Our Catering</strong>
-                        <p>Elevate weddings or parties with bold Nigerian and Caribbean dishes by expert chefs.</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-users"></i>
-                        <strong>Friendly, Expert Support</strong>
-                        <p>Our team helps you pick the perfect ingredients for your next cultural feast.</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-tags"></i>
-                        <strong>Affordable Quality Every Day</strong>
-                        <p>Enjoy premium garri, spices, and more at prices that fit your budget.</p>
-                    </li>
-                </ul>
+                <p class="p1">We're not just a restaurant we are a group of business ready to bring authentic african foods directly to you</p>
+                <div class="why-list">
+                    <div class="why-item">
+                        <div class="why-content">
+                            <i class="fas fa-leaf"></i>
+                            <strong>Authentic African Ingredients</strong>
+                            <p>Find fresh egusi, yam, and jerk spices imported weekly for authentic home-cooked meals.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-content">
+                            <i class="fas fa-utensils"></i>
+                            <strong>Flavors of Home, Made Simple</strong>
+                            <p>Explore our recipe guides to create Nigerian jollof with ease.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-content">
+                            <i class="fas fa-concierge-bell"></i>
+                            <strong>Celebrate Culture with Our Catering</strong>
+                            <p>Elevate weddings or parties with bold Nigerian dishes by expert chefs.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-content">
+                            <i class="fas fa-users"></i>
+                            <strong>Friendly, Expert Support</strong>
+                            <p>Our team helps you pick the perfect ingredients for your next cultural feast.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-content">
+                            <i class="fas fa-tags"></i>
+                            <strong>Affordable Quality Every Day</strong>
+                            <p>Enjoy premium garri, spices, and more at prices that fit your budget.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <img src="pictures/ihh.png" alt="" srcset="">
         </div>
@@ -136,30 +195,9 @@
                 </div>
             </div>
             <div class="itm">
-                <img src="/pictures/ogi.png" alt="">
+                <img src="/pictures/suya.png" alt="">
                 <div class="txt">
-                    <div class="name">Yellow Ogi & Ogi Baba</div>
-                    <div class="price">$34</div>
-                </div>
-            </div>
-            <div class="itm">
-                <img src="/pictures/ogi.png" alt="">
-                <div class="txt">
-                    <div class="name">Yellow Ogi & Ogi Baba</div>
-                    <div class="price">$34</div>
-                </div>
-            </div>
-            <div class="itm">
-                <img src="/pictures/ogi.png" alt="">
-                <div class="txt">
-                    <div class="name">Yellow Ogi & Ogi Baba</div>
-                    <div class="price">$34</div>
-                </div>
-            </div>
-            <div class="itm">
-                <img src="/pictures/ogi.png" alt="">
-                <div class="txt">
-                    <div class="name">Yellow Ogi & Ogi Baba</div>
+                    <div class="name">Beef Kabab(suya)</div>
                     <div class="price">$34</div>
                 </div>
             </div>
@@ -175,8 +213,8 @@
 
     <div class="content">
         <div class="first">
-            <h2>Akhigbe Catering: Authentic African Caribbean for Your Next Event</h2>
-            <p>As a proud division of Akhigbe African Caribbean Food Market Inc., our catering arm is led by Rita a master Nigerian caterer with over 25 years crafting unforgettable meals in the restaurant world. Whether it’s a vibrant wedding feast with jollof rice and suya skewers or a cozy family gathering with pounded yam and egusi soup, we deliver bold, authentic tastes that celebrate culture. Contact us today for custom quotes and menus tailored to your vision.</p>
+            <h2>Akhigbe Catering: Authentic African food for Your Next Event</h2>
+            <p>As a proud division of Akhigbe African Food Market Inc., our catering arm is led by Rita a master Nigerian caterer with over 25 years crafting unforgettable meals in the restaurant world. Whether it’s a vibrant wedding feast with jollof rice and suya skewers or a cozy family gathering with pounded yam and egusi soup, we deliver bold, authentic tastes that celebrate culture. Contact us today for custom quotes and menus tailored to your vision.</p>
         </div>
         <div class="first">
             <h2>Akhigbe Restaurant: Savor the Soul of Nigerian Cuisine</h2>
@@ -212,7 +250,7 @@
         <div class="bottom">
             <div class="logo">
                 <img src="/pictures/logo-akhigbe.png" alt="SkillversityAfrica Official Logo">
-                <div class="p1">Akhigbe African Caribbean Food Market Inc.</div>
+                <div class="p1">Akhigbe AfricanFood Market Inc.</div>
                 
                 <div class="socials">
                     <div class="left2">
@@ -254,5 +292,74 @@
     </footer>
 
 </body>
+
+<script>
+        
+        contactForm.addEventListener('submit', async e => {
+            e.preventDefault();
+            console.log('submitted')
+    
+            try {
+                document.getElementById('loading').style.display = 'flex';
+    
+                const image = document.getElementById('load-img');
+                let expanded = false;
+                const interval = 500; // Time interval in milliseconds
+    
+                const intervalId = setInterval(() => {
+                    if (expanded) {
+                        image.classList.remove('expanded');
+                    } else {
+                        image.classList.add('expanded');
+                    }
+                    expanded = !expanded;
+                }, interval);
+    
+    
+    
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        Firstname: document.getElementById('Firstname').value,
+                        Lastname: document.getElementById('Lastname').value,
+                        email: document.getElementById('email').value,
+                        message: document.getElementById('message').value,
+    
+                    }),
+                });
+    
+                if (response.ok) {
+                    alert("Form Submitted");
+    
+                    clearInterval(intervalId);
+                    document.getElementById('loading').style.display = 'none';
+    
+                } else {
+                    alert("Error submitting form!");
+                }
+            } catch (error) {
+                alert("Error submitting form!");
+                console.error(error);
+            }
+    
+        });
+    
+
+    function slide() {
+    const el = document.getElementById('slidein-mobile');
+    el.style.left = '0';
+    }
+    function slideOut() {
+    const el = document.getElementById('slidein-mobile');
+    el.style.left = '-100%';
+    }
+    function goToForm() {
+    slideOut()
+    document.getElementById('contactForm-ct').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
 
 </html>

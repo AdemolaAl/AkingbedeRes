@@ -1,10 +1,18 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #000000;
+  font-family: "poppins";
+  color: #2E2E2E;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.topmobile {
+  display: none;
+}
+
+#slidein-mobile {
+  display: none;
 }
 
 a {
@@ -71,6 +79,24 @@ header .nav a:hover {
   color: #9b9b9b;
 }
 
+.header2 {
+  color: black;
+}
+.header2 .nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header2 .nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.header2 .nav a:hover {
+  color: #9b9b9b;
+}
+
 .button-85 {
   padding: 0.6em 2em;
   border: none;
@@ -121,7 +147,7 @@ header .nav a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #222;
+  background: #2ECC71;
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -343,7 +369,8 @@ header .nav a:hover {
 .videop .left video {
   height: 600px;
 }
-.videop .left .first-box, .videop .left .second-box {
+.videop .left .first-box,
+.videop .left .second-box {
   width: 30px;
   background-color: rgb(4, 201, 4);
   height: 30%;
@@ -377,6 +404,7 @@ header .nav a:hover {
   width: 100%;
   background: url("/pictures/stew-rice-coconut-plates-copy-space.jpg");
   background-size: cover;
+  background-position: center;
   margin: 0 0 100px 0;
   color: white;
 }
@@ -448,8 +476,64 @@ header .nav a:hover {
   margin: 50px auto;
 }
 
+.gal-hd {
+  background-color: #2ECC71;
+  width: 100%;
+  padding: 20px 0;
+  color: white;
+}
+.gal-hd .cv {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+.gal-hd .cv h2 {
+  margin-bottom: 0;
+  font-size: 40px;
+}
+
+.featued {
+  text-align: center;
+  margin-top: 100px;
+}
+.featued h2 {
+  margin: 0;
+}
+.featued hr {
+  width: 100px;
+  border: 1.3px solid;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 80%;
+  margin: 50px auto;
+}
+.flex .cvr {
+  border-radius: 5px;
+  width: calc(33.33% - 30px);
+  border: 1px solid rgb(243, 243, 243);
+  box-shadow: rgba(0, 0, 0, 0.253) 0px 5px 15px;
+}
+.flex .cvr video {
+  width: 100%;
+  height: 300px;
+}
+.flex .cvr .txts {
+  padding: 20px 10px;
+}
+.flex .cvr .txts .p1 {
+  color: #E53935;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 footer {
-  background-color: #252641;
+  background-color: #1B1B1B;
   color: white;
 }
 footer .top {
@@ -547,6 +631,122 @@ footer .p6 {
   header {
     display: none;
   }
+  #slidein-mobile {
+    display: block;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    z-index: 30;
+    left: -100%;
+    transition: left 0.5s ease;
+  }
+  #slidein-mobile .menu {
+    background: white;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  #slidein-mobile .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  #slidein-mobile .menu-header .logo {
+    height: 50px;
+  }
+  #slidein-mobile .menu-header .close-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  #slidein-mobile .menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  #slidein-mobile .menu-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #slidein-mobile .menu-list hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 1rem 0;
+  }
+  #slidein-mobile .coursera-plus {
+    display: block;
+    color: #0056d2;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+  #slidein-mobile .coursera-plus span {
+    background-color: #0056d2;
+    color: white;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    margin-left: 4px;
+  }
+  #slidein-mobile .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  #slidein-mobile .menu-buttons .join-btn {
+    background: #2ECC71;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #slidein-mobile .menu-buttons .login-btn {
+    background: white;
+    color: #0056d2;
+    padding: 0.8rem;
+    border: 2px solid #0056d2;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .topmobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    z-index: 1;
+    position: fixed;
+    padding: 10px 20px;
+    background-color: #1B1B1B;
+  }
+  .topmobile img {
+    width: 50px;
+  }
+  .topmobile .button1, .topmobile .button2 {
+    font-family: unset;
+    height: 40px;
+    min-width: 90px;
+    border-radius: 40px;
+    border: 0;
+    padding: 0 20px;
+  }
+  .topmobile .bars {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+  .topmobile .bars i {
+    font-size: 20px;
+    color: #ffffff;
+  }
   .main, .mainres {
     background: url("/pictures/high-angle-shot-delicious-traditional-ethiopian-food-with-vegetables-wooden-surface.jpg");
     height: 100dvh;
@@ -591,6 +791,147 @@ footer .p6 {
     margin: auto;
     color: #d1d1d1;
     margin-bottom: 10px;
+  }
+  .mainres header {
+    padding: 5px 20px;
+  }
+  .mainres .background-cover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5137254902);
+  }
+  .mainres .txt-cvr {
+    width: 100%;
+    height: calc(100dvh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .mainres .txt-cvr h1 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    font-size: 40px;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+  }
+  .mainres .txt-cvr h1 p {
+    color: rgb(4, 201, 4);
+    display: inline;
+  }
+  .mainres .txt-cvr .p {
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    color: #d1d1d1;
+    margin-bottom: 10px;
+  }
+  .sample {
+    margin: 100px 30px;
+  }
+  .sample h2 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin: 5px 0;
+  }
+  .sample .preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .sample .preview section {
+    width: 100%;
+  }
+  .sample .preview section .itm img {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+  }
+  .grlmn {
+    display: none;
+    margin: 100px;
+  }
+  .grlmn h2 {
+    text-align: center;
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin: 5px 0;
+  }
+  .grlmn .gallery-cvr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    /* Place images in a circle */
+  }
+  .grlmn .gallery-cvr .gallery {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 15s linear infinite;
+    transform: rotateX(-15deg);
+  }
+  .grlmn .gallery-cvr .gallery img {
+    position: absolute;
+    width: 280px;
+    height: 180px;
+    left: 10px;
+    top: 60px;
+    border-radius: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .grlmn .gallery-cvr .gallery img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(400px);
+  }
+  .grlmn .gallery-cvr .gallery img:nth-child(2) {
+    transform: rotateY(60deg) translateZ(400px);
+  }
+  .grlmn .gallery-cvr .gallery img:nth-child(3) {
+    transform: rotateY(120deg) translateZ(400px);
+  }
+  .grlmn .gallery-cvr .gallery img:nth-child(4) {
+    transform: rotateY(180deg) translateZ(400px);
+  }
+  .grlmn .gallery-cvr .gallery img:nth-child(5) {
+    transform: rotateY(240deg) translateZ(400px);
+  }
+  .grlmn .gallery-cvr .gallery img:nth-child(6) {
+    transform: rotateY(300deg) translateZ(400px);
+  }
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  .led {
+    margin: 50px 30px;
+    width: unset;
+  }
+  .led h2 {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin: 5px 0;
+  }
+  .led p {
+    font-size: 15px;
+    color: #686868;
   }
   .videop {
     width: unset;
@@ -643,10 +984,6 @@ footer .p6 {
     line-height: 35px;
   }
   .elev {
-    width: 100%;
-    background: url("/pictures/stew-rice-coconut-plates-copy-space.jpg");
-    background-size: cover;
-    background-position: center;
     margin: 0 0 100px 0;
     color: white;
   }
@@ -685,7 +1022,23 @@ footer .p6 {
     margin: auto;
   }
   .why .txts h2 {
-    font-size: 28px;
+    font-size: 35px;
+    margin: 0;
+  }
+  .why .txts .p1 {
+    margin-bottom: 30px;
+  }
+  .why .txts .why-item {
+    margin-bottom: 40px;
+  }
+  .why .txts .why-item i {
+    color: #2ECC71;
+  }
+  .why .txts .why-item strong {
+    font-size: 18px;
+  }
+  .why .txts .why-item p {
+    font-size: 15px;
   }
   .why img {
     border-radius: 10px;
@@ -716,8 +1069,51 @@ footer .p6 {
     width: 100%;
     border-radius: 10px;
   }
+  .gal-hd {
+    background-color: #2ECC71;
+    width: unset;
+    padding: 20px 10px;
+    padding-top: 100px;
+    color: white;
+  }
+  .gal-hd .cv {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .gal-hd .cv h2 {
+    margin-bottom: 0;
+    font-size: 40px;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: unset;
+    margin: 50px 20px;
+  }
+  .flex .cvr {
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgb(243, 243, 243);
+    box-shadow: rgba(0, 0, 0, 0.253) 0px 5px 15px;
+  }
+  .flex .cvr video {
+    width: 100%;
+    height: 300px;
+  }
+  .flex .cvr .txts {
+    padding: 20px 10px;
+  }
+  .flex .cvr .txts .p1 {
+    color: #E53935;
+    font-weight: 600;
+    font-size: 20px;
+  }
   footer {
-    background-color: #252641;
+    background-color: #1B1B1B;
     color: white;
   }
   footer .top {

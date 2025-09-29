@@ -345,7 +345,7 @@ footer .p6 {
     margin-bottom: 1rem;
   }
   #slidein-mobile .menu-header .logo {
-    height: 30px;
+    height: 50px;
   }
   #slidein-mobile .menu-header .close-btn {
     font-size: 2rem;
@@ -389,7 +389,7 @@ footer .p6 {
     margin-top: 1rem;
   }
   #slidein-mobile .menu-buttons .join-btn {
-    background: #0056d2;
+    background: #2ECC71;
     color: white;
     padding: 0.8rem;
     border: none;

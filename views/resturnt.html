@@ -25,6 +25,51 @@
 <body>
 
 
+    <div class="topmobile">
+
+        <img src="/pictures/logo-akhigbe.png" alt="SkillversityAfrica Official Logo" srcset="">
+
+        <button class="bars" onclick="slide()"><i class="fa-solid fa-bars"></i></button>
+
+    </div>
+
+    <div id="slidein-mobile">
+        <div class="menu">
+            <div class="menu-header">
+                <a href="/"><img src="/pictures/logo-akhigbe.png" alt="Coursera Logo" class="logo" /></a>
+                <button class="close-btn" onclick="slideOut()">&times;</button>
+            </div>
+            <ul class="menu-list">
+                <a href="/">
+                    <li>Home</li>
+                </a>
+                <a href="/about">
+                    <li>About Us</li>
+                </a>
+                <a href="/res">
+                    <li>Restaurant</li>
+                </a>
+                <a href="/gallery">
+                    <li>Gallery</li>
+                </a>
+                <a href="/contact">
+                    <li>Contact</li>
+                </a>
+                <hr />
+                <hr />
+            </ul>
+
+
+            <a href="/contact">
+                <div class="menu-buttons">
+                    <button class="join-btn">Apply now</button>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
     <div class="mainres">
         <div class="background-cover">
             <header>
@@ -37,8 +82,8 @@
                         <a href="/">Home</a>
                         <a href="/about">About Us</a>
                         <a href="/explore-foods">Explore Foods</a>
-                        <a href="/reviews">Reviews</a>
-                        <a href="/faq">FAQ</a>
+                        <a href="/gallery">Gallery</a>
+                        <a href=" /contact">Contact</a>
                     </div>
                 </div>
 
@@ -47,10 +92,10 @@
                 <div class="txt-cvr">
                     <div class="txt">
                         <h1>
-                            <p>Akhigbe Restaurant:</p>  Savor the Soul of Nigerian Cuisine
+                            <p>Akhigbe Restaurant:</p> Savor the Soul of Nigerian Cuisine
                         </h1>
                         <p class="p">Authentic flavors crafted by Chef Rita, 25+ years of culinary mastery.</p>
-                        <button class="button-85">Learn More </button>
+                        <a href="/about"><button class="button-85">Learn More </button></a>
                     </div>
                 </div>
             </div>
@@ -82,7 +127,7 @@
                 </div>
 
             </section>
-    
+
             <section>
                 <h3>Specialties</h3>
                 <div class="itm">
@@ -93,24 +138,33 @@
                     </div>
                 </div>
             </section>
-    
-    
+
+
         </div>
     </div>
 
     <div class="led">
         <h2>Insights</h2>
-        <p>Led by Rita, our celebrated Nigerian chef with 25+ years of culinary mastery, Akhigbe Restaurant transports you to
+        <p>Led by Rita, our celebrated Nigerian chef with 25+ years of culinary mastery, Akhigbe Restaurant transports
+            you to
             the heart of Nigeria with every bite.
-            Indulge in house specials like aromatic jollof rice, tender pepper soup, or crispy plantain chips, all prepared with
+            Indulge in house specials like aromatic jollof rice, tender pepper soup, or crispy plantain chips, all
+            prepared with
             fresh,
-            imported ingredients. Our cozy space buzzes with lively Afrobeat tunes and the aroma of home-cooked meals—perfect
+            imported ingredients. Our cozy space buzzes with lively Afrobeat tunes and the aroma of home-cooked
+            meals—perfect
             for date
-            nights or family gatherings. Join us [days/hours] at [address] and reserve your table now for an experience that
+            nights or family gatherings. Join us [days/hours] at [address] and reserve your table now for an experience
+            that
             lingers.
         </p>
-        <button class="btn2">Reserve Now</button>
+        <a href="/contact"><button class="btn2">Reserve Now</button></a>
     </div>
+
+
+
+
+
 
     <div class="grlmn">
         <h2>View our dishes</h2>
@@ -127,7 +181,7 @@
     </div>
 
 
-    
+
     <footer>
 
         <div class="top">
@@ -155,8 +209,8 @@
         <div class="bottom">
             <div class="logo">
                 <img src="/pictures/logo-akhigbe.png" alt="SkillversityAfrica Official Logo">
-                <div class="p1">Akhigbe African Caribbean Food Market Inc.</div>
-                
+                <div class="p1">Akhigbe African Food Market Inc.</div>
+
                 <div class="socials">
                     <div class="left2">
                         <i class="fa-brands fa-facebook-f"></i>
@@ -182,7 +236,9 @@
                 </div>
                 <div class="cat">
                     <div class="top2">Grocery</div>
-                    <div class="p5"><a href="https://www.google.com/maps?q=6921+Steeles+Avenue+West,+Unit+12+Etobicoke,+Ontario+M9W+6T5">236 Sherbourne Street, Unit 2 (Down Town Toronto</a></div>
+                    <div class="p5"><a
+                            href="https://www.google.com/maps?q=6921+Steeles+Avenue+West,+Unit+12+Etobicoke,+Ontario+M9W+6T5">236
+                            Sherbourne Street, Unit 2 (Down Town Toronto</a></div>
                     <div class="p5"><a href="tel:+416-798-800">Tel: +416-798-800</a></div>
                 </div>
                 <div class="cat">
@@ -197,5 +253,74 @@
     </footer>
 
 </body>
+
+<script>
+
+    contactForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        console.log('submitted')
+
+        try {
+            document.getElementById('loading').style.display = 'flex';
+
+            const image = document.getElementById('load-img');
+            let expanded = false;
+            const interval = 500; // Time interval in milliseconds
+
+            const intervalId = setInterval(() => {
+                if (expanded) {
+                    image.classList.remove('expanded');
+                } else {
+                    image.classList.add('expanded');
+                }
+                expanded = !expanded;
+            }, interval);
+
+
+
+            const response = await fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    Firstname: document.getElementById('Firstname').value,
+                    Lastname: document.getElementById('Lastname').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value,
+
+                }),
+            });
+
+            if (response.ok) {
+                alert("Form Submitted");
+
+                clearInterval(intervalId);
+                document.getElementById('loading').style.display = 'none';
+
+            } else {
+                alert("Error submitting form!");
+            }
+        } catch (error) {
+            alert("Error submitting form!");
+            console.error(error);
+        }
+
+    });
+
+
+    function slide() {
+        const el = document.getElementById('slidein-mobile');
+        el.style.left = '0';
+    }
+    function slideOut() {
+        const el = document.getElementById('slidein-mobile');
+        el.style.left = '-100%';
+    }
+    function goToForm() {
+        slideOut()
+        document.getElementById('contactForm-ct').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
 
 </html>
