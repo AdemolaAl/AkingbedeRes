@@ -153,25 +153,25 @@ header .nav a:hover {
   border-radius: 10px;
 }
 
-.main, .mainres {
+.main, .maincat, .mainres {
   background: url("/pictures/high-angle-shot-delicious-traditional-ethiopian-food-with-vegetables-wooden-surface.jpg");
   height: 100dvh;
   background-size: cover;
   background-position: center;
   width: 100%;
 }
-.main .background-cover, .mainres .background-cover {
+.main .background-cover, .maincat .background-cover, .mainres .background-cover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5882352941);
 }
-.main .cvr, .mainres .cvr {
+.main .cvr, .maincat .cvr, .mainres .cvr {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex: 1;
 }
-.main .txt-cvr, .mainres .txt-cvr {
+.main .txt-cvr, .maincat .txt-cvr, .mainres .txt-cvr {
   width: 100%;
   height: calc(100dvh - 120px);
   display: flex;
@@ -180,7 +180,7 @@ header .nav a:hover {
   color: white;
   text-align: center;
 }
-.main .txt-cvr h1, .mainres .txt-cvr h1 {
+.main .txt-cvr h1, .maincat .txt-cvr h1, .mainres .txt-cvr h1 {
   font-family: "Rozha One", serif;
   font-weight: 400;
   font-style: normal;
@@ -188,11 +188,11 @@ header .nav a:hover {
   font-size: 50px;
   display: inline;
 }
-.main .txt-cvr h1 p, .mainres .txt-cvr h1 p {
+.main .txt-cvr h1 p, .maincat .txt-cvr h1 p, .mainres .txt-cvr h1 p {
   color: rgb(4, 201, 4);
   display: inline;
 }
-.main .txt-cvr p, .mainres .txt-cvr p {
+.main .txt-cvr p, .maincat .txt-cvr p, .mainres .txt-cvr p {
   width: 50%;
   margin: auto;
   color: #d1d1d1;
@@ -243,8 +243,77 @@ header .nav a:hover {
   margin-bottom: 10px;
 }
 
+.maincat {
+  height: unset;
+  background: unset;
+  background-color: white;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #d6d7db 100%);
+  background-position: center;
+  background-size: cover;
+}
+.maincat .background-cover {
+  display: flex;
+  flex-direction: column;
+}
+.maincat header {
+  padding: 5px 20px;
+}
+.maincat .cvr3 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 100px 30px;
+  gap: 30px;
+}
+.maincat .texts {
+  width: 55%;
+}
+.maincat .texts h2 {
+  font-size: 45px;
+  color: oklch(21% 0.034 264.665deg);
+}
+.maincat .texts .sub {
+  color: oklch(55.1% 0.027 264.364deg);
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.maincat .vb {
+  position: relative;
+  padding: 20px 30px;
+  border: 1px solid #2ECC71;
+  flex: 1;
+}
+.maincat .vb img {
+  width: 100%;
+}
+.maincat .vb .first-box,
+.maincat .vb .second-box {
+  width: 30px;
+  background-color: #2ECC71;
+  height: 30%;
+  position: absolute;
+}
+.maincat .vb .first-box {
+  top: 0px;
+  left: 0px;
+}
+.maincat .vb .second-box {
+  bottom: 0px;
+  right: 0px;
+}
+.maincat .background-cover {
+  width: 100%;
+  height: 100%;
+  background-color: unset;
+}
+
 .led {
   margin: 50px 30px;
+}
+.led .cvr {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 .led .cvv {
   width: 50%;
@@ -255,6 +324,29 @@ header .nav a:hover {
   font-style: normal;
   font-size: 40px;
   margin: 5px 0;
+}
+.led .left {
+  position: relative;
+  padding: 20px 30px;
+  border: 1px solid rgb(4, 201, 4);
+}
+.led .left video {
+  height: 600px;
+}
+.led .left .first-box,
+.led .left .second-box {
+  width: 30px;
+  background-color: rgb(4, 201, 4);
+  height: 30%;
+  position: absolute;
+}
+.led .left .first-box {
+  top: 0px;
+  right: 0px;
+}
+.led .left .second-box {
+  bottom: 0px;
+  left: 0px;
 }
 
 .btn2 {
@@ -753,25 +845,25 @@ footer .p6 {
     font-size: 20px;
     color: #ffffff;
   }
-  .main, .mainres {
+  .main, .mainres, .maincat {
     background: url("/pictures/high-angle-shot-delicious-traditional-ethiopian-food-with-vegetables-wooden-surface.jpg");
     height: 100dvh;
     background-size: cover;
     background-position: center;
     width: 100%;
   }
-  .main .background-cover, .mainres .background-cover {
+  .main .background-cover, .mainres .background-cover, .maincat .background-cover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5882352941);
   }
-  .main .cvr, .mainres .cvr {
+  .main .cvr, .mainres .cvr, .maincat .cvr {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex: 1;
   }
-  .main .txt-cvr, .mainres .txt-cvr {
+  .main .txt-cvr, .mainres .txt-cvr, .maincat .txt-cvr {
     width: 100%;
     height: calc(100dvh - 120px);
     display: flex;
@@ -780,7 +872,7 @@ footer .p6 {
     color: white;
     text-align: center;
   }
-  .main .txt-cvr h1, .mainres .txt-cvr h1 {
+  .main .txt-cvr h1, .mainres .txt-cvr h1, .maincat .txt-cvr h1 {
     font-family: "Rozha One", serif;
     font-weight: 400;
     font-style: normal;
@@ -788,11 +880,11 @@ footer .p6 {
     font-size: 50px;
     display: inline;
   }
-  .main .txt-cvr h1 p, .mainres .txt-cvr h1 p {
+  .main .txt-cvr h1 p, .mainres .txt-cvr h1 p, .maincat .txt-cvr h1 p {
     color: rgb(4, 201, 4);
     display: inline;
   }
-  .main .txt-cvr p, .mainres .txt-cvr p {
+  .main .txt-cvr p, .mainres .txt-cvr p, .maincat .txt-cvr p {
     width: 90%;
     margin: auto;
     color: #d1d1d1;

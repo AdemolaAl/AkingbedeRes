@@ -284,11 +284,101 @@ header {
     }
 }
 
+.maincat {
+    @extend .main;
+    height: unset;
+    background: unset;
+    background-color:  white;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #d6d7db 100%);
+    background-position: center;
+    background-size: cover;
+    
+
+    .background-cover{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        padding: 5px 20px;
+    }
+
+    .cvr3{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin: 100px 30px;
+        gap: 30px;
+    }
+
+    .texts{
+        width: 55%;
+        h2{
+            font-size: 45px;
+            color: oklch(21% .034 264.665);
+        }
+        .sub{
+            color: oklch(55.1% .027 264.364);
+            font-size: 1.25rem;
+            line-height: 2rem;    
+        }
+        
+    }
+
+    .vb {
+        position: relative;
+        padding: 20px 30px;
+        border: 1px solid #2ECC71;
+        flex: 1;
+
+        img {
+            width: 100%;
+        }
+
+        .first-box,
+        .second-box {
+            width: 30px;
+            background-color: #2ECC71;
+            height: 30%;
+            position: absolute;
+        }
+
+        .first-box {
+            top: 0px;
+            left: 0px;
+        }
+
+        .second-box {
+            bottom: 0px;
+            right: 0px;
+        }
+
+    }
+
+    
+    .background-cover {
+        width: 100%;
+        height: 100%;
+        background-color: unset;
+    }
+
+    
+}
+
+
+
 .led {
     margin: 50px 30px;
+
+    .cvr{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
     
     .cvv{
         width: 50%;
+        
     }
     h2 {
         font-family: "Rozha One", serif;
@@ -296,6 +386,35 @@ header {
         font-style: normal;
         font-size: 40px;
         margin: 5px 0;
+    }
+
+    .left {
+        position: relative;
+        padding: 20px 30px;
+        border: 1px solid rgb(4, 201, 4);
+
+        video {
+            height: 600px;
+        }
+
+        .first-box,
+        .second-box {
+            width: 30px;
+            background-color: rgb(4, 201, 4);
+            height: 30%;
+            position: absolute;
+        }
+
+        .first-box {
+            top: 0px;
+            right: 0px;
+        }
+
+        .second-box {
+            bottom: 0px;
+            left: 0px;
+        }
+
     }
 }
 
