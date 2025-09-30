@@ -304,10 +304,13 @@ header {
     }
 
     .cvr3{
+        @extend .cvr;
         flex: 1;
+        width: unset;
         display: flex;
         align-items: center;
-        margin: 100px 30px;
+        margin: 100px auto;
+        padding: 0px 30px;
         gap: 30px;
     }
 
@@ -329,10 +332,13 @@ header {
         position: relative;
         padding: 20px 30px;
         border: 1px solid #2ECC71;
-        flex: 1;
+        width: 40%;
 
-        img {
+        img,video {
             width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
         }
 
         .first-box,
@@ -363,6 +369,42 @@ header {
     }
 
     
+}
+
+.loc{
+    margin: 100px 30px;
+    .sub{
+        color: oklch(55.1% .027 264.364);
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+
+    .btns{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 20px;
+        button{
+            flex: 1;
+            border: none;
+            font: unset;
+            padding:5px 20px;
+            background-color: white;
+            color: white;
+            border-radius: 10px;
+            font-size: 17px;
+        }
+
+        .b1{
+            background-color: #2ECC71;
+        }
+        .b2{
+            border: 1px solid #2ECC71;
+            color: #2ECC71;
+        }
+    }
 }
 
 
@@ -416,6 +458,10 @@ header {
         }
 
     }
+}
+
+.led2{
+    @extend .led;
 }
 
 .btn2 {
@@ -1025,6 +1071,7 @@ footer {
 
 
 
+
     .main {
         background: url("/pictures/high-angle-shot-delicious-traditional-ethiopian-food-with-vegetables-wooden-surface.jpg");
         height: 100dvh;
@@ -1123,6 +1170,94 @@ footer {
             }
         }
     }
+
+    .maincat {
+        @extend .main;
+        height: unset;
+        background: unset;
+        background-color: white;
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #d6d7db 100%);
+        background-position: center;
+        background-size: cover;
+
+
+        .background-cover {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 5px 20px;
+        }
+
+        .cvr3 {
+            @extend .cvr;
+            flex: 1;
+            width: unset;
+            display: block;
+            align-items: center;
+            margin: 100px auto;
+            padding: 0px 30px;
+            gap: 30px;
+        }
+
+        .texts {
+            width: unset;
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 35px;
+                color: oklch(21% .034 264.665);
+            }
+
+            .sub {
+                color: oklch(55.1% .027 264.364);
+                font-size: 1.1rem;
+                line-height: 2rem;
+            }
+
+        }
+
+        .vb {
+            position: relative;
+            padding: 20px 30px;
+            border: 1px solid #2ECC71;
+            width: unset;
+
+            img {
+                width: 100%;
+            }
+
+            .first-box,
+            .second-box {
+                width: 30px;
+                background-color: #2ECC71;
+                height: 30%;
+                position: absolute;
+            }
+
+            .first-box {
+                top: 0px;
+                left: 0px;
+            }
+
+            .second-box {
+                bottom: 0px;
+                right: 0px;
+            }
+
+        }
+
+
+        .background-cover {
+            width: 100%;
+            height: 100%;
+            background-color: unset;
+        }
+
+
+    }
+
 
 
     .sample {
@@ -1254,6 +1389,65 @@ footer {
         }
     }
 
+    .led2 {
+        margin: 50px 30px;
+
+        .cvr {
+            display: flex;
+            flex-direction: column;
+            align-items: unset;
+            gap: 50px;
+        }
+
+        .cvv {
+            width: unset;
+
+        }
+
+        h2 {
+            font-family: unset;
+            font-weight: 700;
+            font-size: 35px;
+            color: oklch(21% .034 264.665);
+            margin: 5px 0;
+        }
+
+        p{
+            color: oklch(55.1% .027 264.364);
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+        }
+
+        .left {
+            position: relative;
+            padding: 20px 30px;
+            border: 1px solid rgb(4, 201, 4);
+
+            video {
+                height: unset;
+                width: 100%;
+            }
+
+            .first-box,
+            .second-box {
+                width: 30px;
+                background-color: rgb(4, 201, 4);
+                height: 30%;
+                position: absolute;
+            }
+
+            .first-box {
+                top: 0px;
+                right: 0px;
+            }
+
+            .second-box {
+                bottom: 0px;
+                left: 0px;
+            }
+
+        }
+    }
 
 
 
