@@ -58,26 +58,36 @@
     <div id="slidein-mobile">
         <div class="menu">
             <div class="menu-header">
-              <a href="/"><img src="/pictures/logo-akhigbe.png" alt="Coursera Logo" class="logo" /></a>
-              <button class="close-btn" onclick="slideOut()">&times;</button>
+                <a href="/"><img src="/pictures/logo-akhigbe.png" alt="Coursera Logo" class="logo" /></a>
+                <button class="close-btn" onclick="slideOut()">&times;</button>
             </div>
             <ul class="menu-list">
-              <a href="/"><li>Home</li></a>
-              <a href="/about"><li>About Us</li></a>
-              <a href="/res"><li>Restaurant</li></a>
-              <a href="/groceries"><li>Groceries</li></a>
-              <a href="/contact"><li>Contact</li></a>
-              <hr />
-              <hr />
+                <a href="/">
+                    <li>Home</li>
+                </a>
+                <a href="/about">
+                    <li>About Us</li>
+                </a>
+                <a href="/res">
+                    <li>Restaurant</li>
+                </a>
+                <a href="/groceries">
+                    <li>Groceries</li>
+                </a>
+                <a href="/contact">
+                    <li>Contact</li>
+                </a>
+                <hr />
+                <hr />
             </ul>
-             
-            
+
+
             <a href="/contact">
                 <div class="menu-buttons">
-                <button class="join-btn">Apply now</button>
+                    <button class="join-btn">Apply now</button>
                 </div>
             </a>
-          </div>
+        </div>
     </div>
 
 
@@ -137,9 +147,11 @@
         </div>
 
         <div class="right">
-            <form id="contactForm" >
+            <form id="contactForm">
                 <div class="p1">Make a rquest — let's work together.</div>
-                <div class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni sunt laudantium qui fugit est consequatur non, dolorum ullam illum dicta ut, reiciendis hic nam, nobis excepturi iusto dolore explicabo?</div>
+                <div class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni sunt laudantium
+                    qui fugit est consequatur non, dolorum ullam illum dicta ut, reiciendis hic nam, nobis excepturi
+                    iusto dolore explicabo?</div>
 
                 <div class="cv">
                     <div class="input-main">
@@ -164,78 +176,78 @@
 
                 <button class="button2">Send</button>
 
-            </contact>
+                </contact>
         </div>
     </div>
 
 </body>
 
 <script>
-        
-        contactForm.addEventListener('submit', async e => {
-            e.preventDefault();
-            console.log('submitted')
-    
-            try {
-                document.getElementById('loading').style.display = 'flex';
-    
-                const image = document.getElementById('load-img');
-                let expanded = false;
-                const interval = 500; // Time interval in milliseconds
-    
-                const intervalId = setInterval(() => {
-                    if (expanded) {
-                        image.classList.remove('expanded');
-                    } else {
-                        image.classList.add('expanded');
-                    }
-                    expanded = !expanded;
-                }, interval);
-    
-    
-    
-                const response = await fetch('/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        Firstname: document.getElementById('Firstname').value,
-                        Lastname: document.getElementById('Lastname').value,
-                        email: document.getElementById('email').value,
-                        message: document.getElementById('message').value,
-    
-                    }),
-                });
-    
-                if (response.ok) {
-                    alert("Form Submitted");
-    
-                    clearInterval(intervalId);
-                    document.getElementById('loading').style.display = 'none';
-    
+
+    contactForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        console.log('submitted')
+
+        try {
+            document.getElementById('loading').style.display = 'flex';
+
+            const image = document.getElementById('load-img');
+            let expanded = false;
+            const interval = 500; // Time interval in milliseconds
+
+            const intervalId = setInterval(() => {
+                if (expanded) {
+                    image.classList.remove('expanded');
                 } else {
-                    alert("Error submitting form!");
+                    image.classList.add('expanded');
                 }
-            } catch (error) {
+                expanded = !expanded;
+            }, interval);
+
+
+
+            const response = await fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    Firstname: document.getElementById('Firstname').value,
+                    Lastname: document.getElementById('Lastname').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value,
+
+                }),
+            });
+
+            if (response.ok) {
+                alert("Form Submitted");
+
+                clearInterval(intervalId);
+                document.getElementById('loading').style.display = 'none';
+
+            } else {
                 alert("Error submitting form!");
-                console.error(error);
             }
-    
-        });
-    
+        } catch (error) {
+            alert("Error submitting form!");
+            console.error(error);
+        }
+
+    });
+
 
     function slide() {
-    const el = document.getElementById('slidein-mobile');
-    el.style.left = '0';
+        const el = document.getElementById('slidein-mobile');
+        el.style.left = '0';
     }
     function slideOut() {
-    const el = document.getElementById('slidein-mobile');
-    el.style.left = '-100%';
+        const el = document.getElementById('slidein-mobile');
+        el.style.left = '-100%';
     }
     function goToForm() {
-    slideOut()
-    document.getElementById('contactForm-ct').scrollIntoView({ behavior: 'smooth' });
+        slideOut()
+        document.getElementById('contactForm-ct').scrollIntoView({ behavior: 'smooth' });
     }
 </script>
 
