@@ -17,7 +17,7 @@ app.get('/', (req,res)=>{
 })
 
 app.get('/contact', (req,res)=>{
-    res.sendFile(__dirname + '/views/contact.html');
+    res.sendFile(__dirname + '/views/contact2.html');
 })
 app.get('/product', (req,res)=>{
     res.sendFile(__dirname + '/views/productpage.html');
