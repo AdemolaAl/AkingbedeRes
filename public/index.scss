@@ -38,6 +38,12 @@ a {
     color: white;
 }
 
+.sub{
+        color: oklch(55.1% .027 264.364);
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+
 .cvr {
     max-width: 1400px;
     width: 100%;
@@ -286,7 +292,8 @@ header {
 
 .maincat {
     @extend .main;
-    height: unset;
+    min-height: 100dvh;
+    height: fit-content;
     background: unset;
     background-color:  white;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #d6d7db 100%);
@@ -336,7 +343,7 @@ header {
 
         img,video {
             width: 100%;
-            height: 300px;
+            height: 500px;
             object-fit: cover;
             object-position: center;
         }
@@ -373,6 +380,8 @@ header {
 
 .loc{
     margin: 100px 30px;
+
+    
     .sub{
         color: oklch(55.1% .027 264.364);
         font-size: 1.1rem;
@@ -380,14 +389,11 @@ header {
     }
 
     .btns{
-        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         gap: 20px;
         margin-top: 20px;
         button{
-            flex: 1;
             border: none;
             font: unset;
             padding:5px 20px;
@@ -409,6 +415,7 @@ header {
 
 
 
+
 .led {
     margin: 50px 30px;
 
@@ -422,11 +429,8 @@ header {
         width: 50%;
         
     }
-    h2 {
-        font-family: "Rozha One", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 40px;
+    h2 { 
+        font-size: 35px;
         margin: 5px 0;
     }
 
@@ -479,10 +483,7 @@ header {
     margin: 100px 30px;
 
     h2 {
-        font-family: "Rozha One", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 40px;
+        font-size: 35px;
         margin: 5px 0;
     }
 
@@ -1040,7 +1041,8 @@ footer {
         z-index: 1;
         position: fixed;
         padding: 10px 20px;
-        background-color: #1B1B1B;
+        background-color: #ffffff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         img {
             width: 50px;
@@ -1063,7 +1065,7 @@ footer {
 
             i {
                 font-size: 20px;
-                color: #ffffff;
+                color: #141414;
             }
         }
     }
@@ -1124,6 +1126,8 @@ footer {
         }
 
     }
+
+    
 
     .mainres {
         header {
@@ -1264,10 +1268,7 @@ footer {
         margin: 100px 30px;
 
         h2 {
-            font-family: "Rozha One", serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 40px;
+            font-size: 35px;
             margin: 5px 0;
         }
 
@@ -1376,16 +1377,18 @@ footer {
         width: unset;
 
         h2 {
-            font-family: "Rozha One", serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 40px;
+            font-size: 35px;
+            font-weight: 600;
             margin: 5px 0;
         }
 
         p {
             font-size: 15px;
             color: #686868;
+        }
+
+        .cvv{
+            width: unset;
         }
     }
 
@@ -1547,8 +1550,8 @@ footer {
 
 
     .why {
-
-        padding: 0px 20px;
+        margin-top: 100px;
+        padding: 0px 30px;
 
         .cvr {
             display: flex;
@@ -1561,7 +1564,7 @@ footer {
 
         .txts {
             h2 {
-                font-size: 35px;
+                font-size: 30px;
                 margin: 0;
             }
 
@@ -1570,7 +1573,7 @@ footer {
             }
 
             .why-item {
-                margin-bottom: 40px;
+                margin-bottom: 20px;
 
                 i {
                     color: #2ECC71;
@@ -1597,7 +1600,7 @@ footer {
 
     .content {
         width: unset;
-        margin: 50px 20px;
+        margin: 50px 30px;
     }
 
 

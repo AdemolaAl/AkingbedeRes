@@ -466,7 +466,8 @@ footer{
         z-index: 1;
         position: fixed;
         padding: 10px 20px;
-        background-color: #1B1B1B;
+        background-color: #ffffff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         img {
             width: 50px;
@@ -489,7 +490,7 @@ footer{
 
             i {
                 font-size: 20px;
-                color: #ffffff;
+                color: #111111;
             }
         }
     }
